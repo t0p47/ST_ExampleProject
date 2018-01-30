@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 65b666b3aa77c45ec872bffcfbbbaab9
+labels:
+- Turret
+- Intercept
+- AI
+timeCreated: 1446021647
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

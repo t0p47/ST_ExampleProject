@@ -1,0 +1,151 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid2\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid101\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid201\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid202\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid301\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww10680\viewh8400\viewkind0
+\pard\tx373\tx716\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 2.0.0\
+Consolidated all documentation into a Docs folder in MobFarm Basics.\
+Changes to MobFarm Basics\
+	-	See MobFarm Basics Change Log.\
+\
+ST_Turret\
+	-	weaponMount changed to Transform type, and moved to MF_AbstractPlatform.\
+	-	Changed target, rotate, elevator variables to Transform types from GameObjects.\
+	-	Improved audio handeling.\
+	-	Depreciated turningAimInaccuracy due to poor performance. (aimError and turningWeapInaccuracy are still present.)\
+	-	Improved aimError math.\
+	-	Moved BallisticIteration() into MF_StaticBallistics.\
+ST_TurretControl\
+	-	Now inherits from MF_AbstractPlatformControl.\
+	-	Weapons list is now a part of MF_AbstractPlatformControl.\
+	-	ControlType.AI_NoTarget replaced with ControlType.None\
+		(Turrets can be prevented from picking targets with the absence of an active targeting script.)\
+	-	player has become playerScript\
+	-	target changed to Transform from GameObject.\
+Turret Prefabs:\
+	- 	Modified rigidbody/collider setup.\
+	-	Moved MF_B_Selection scripts to root level.\
+ST_Player\
+	-	AimObject and FireObject can now be defined from prefabs or objects already in the scene.\
+Demo Scenes:\
+	-	Overall improvement.\
+	-	Now uses target prefabs included in the new MobFarm Basics package.\
+	-	Created workaround to create tags that don\'92t exist in project settings used by yet-to-be-spawned targets.\
+	-	Player_Click scene removed. Required project settings don\'92t import, and the Ballistic scene includes Player_Click functionality.\
+\
+Bug Fixes\
+	-	Turret can now track with no weapon even if useIntercept is true.\
+	-	Fixed a bug when using the scale tool on a turret would cause a float equality error.\
+	-	Fixed a bug that would give incorrect ballistic flight time in certain circumstances, leading to incorrect ballistic aim.\
+	- 	Fixed a bug that would cause FireFullBurst() to become out of sync.\
+	-	Fixed a bug that would cause velocity to not get transferred to the weapon when under player control\
+	-	Fixed a bug that would cause los check to fail when using timed los checks\
+	-	Fixed a bug that wouldn\'92t properly update certain variables when using the inspector to change a turret control script\'92s target by dragging-and-dropping a reference.\
+\
+\pard\tx373\tx716\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 1.2.0\
+Fixed file folder structure.\
+Implemented a more logical file layout.\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 Improved high-speed jitter suppression.\
+Improved automatic searching of hierarchy to cache script links.\
+\
+Unity 5 Compatibility.\
+{\listtext	-	}Updated APIs.\
+{\listtext	-	}Updated materials.\
+{\listtext	-	}Switched to default skybox.\
+Added support for object and target selection via clicking.\
+{\listtext	-	}Click an object to show all its targets and current weapon target.\
+{\listtext	-	}Shift-click an object to add or remove from selected object\'92s target list.\
+{\listtext	-	}Right-click or Ctrl-click adds and prioritizes an object in the selected object\'92s target list.\
+Better player control support.\
+{\listtext	-	}Ability to aim in empty space.\
+{\listtext	-	}Automatic suspension of useIntercept under player targeting.\
+{\listtext	-	}New mode to designate aim point by clicking. (Separate from targeting)\
+MF_BasicScanner\
+{\listtext	\uc0\u8259 	}Scanner option (targetRootObject) to use the root object as target, or the actual target object.\
+{\listtext	\uc0\u8259 	}Removed requirement for targets to have a script that inherits MF_AbstractStatus.\
+MF_BasicWeapon\
+{\listtext	-	}Option to activate / deactivate weapon. (enables creation of weapon toggles)\
+{\listtext	-	}Option to fire a full burst using ShootBurst().\
+ST_TurretControl\
+{\listtext	-	}Will skip weapons that aren\'92t marked active.\
+{\listtext	-	}Full Burst option when firing.\
+{\listtext	-	}Option to use an approximated ballistic arc for LoS checks.\
+{\listtext	-	}Option for turret to automatically try other ballistic arc if default arc\'92s LoS is blocked.\
+MF_BasicProjectile\
+{\listtext	-	}Will apply damage to root object of hit colliders.\
+{\listtext	-	}Renamed blastRadius to damageRadius.\
+{\listtext	-	}Added blastRadius for blast object size. \
+ST_Turret\
+{\listtext	-	}Option to specify ballistic calculation iterations for both high and low arcs.\
+{\listtext	-	}Optional delay before moving to rest position when without a target.\
+Other\
+{\listtext	-	}Various small tweaks.\
+{\listtext	-	}Various code improvements.\
+{\listtext	-	}Improvements to example scenes.\
+{\listtext	-	}Renamed file MF_StaticMath to MF_StaticUtilities.\
+Bug fixes:\
+{\listtext	-	}Fixed ballistic control for turrets that start under player control.\
+{\listtext	-	}Fixed demo targets from getting stuck on the ground.\
+{\listtext	-	}Fixed modulo method in MFmath to work with negative numbers.\
+{\listtext	-	}Fixed incorrect reading of collider bounds size.\
+\
+1.1.1\
+Better scanner behavior\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Scanners can detect based on line of sight.\
+{\listtext	\uc0\u8259 	}Targets drop off list if not scanned in awhile.\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 Ballistics support\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Turrets can aim shots that are affected by gravity.\
+{\listtext	\uc0\u8259 	}Optional indirect fire mode to force using of higher arc.\
+{\listtext	\uc0\u8259 	}New demo scene added for ballistic trajectories.\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 MF_BasicWeapon\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Added a RangeCheck() method. Supports ballistic range.\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 MF_BasicTargeting\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Options to limit target picks to those within arc limits and weapon range. \
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 MF_BasicProjectile\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}Blast radius added as a damage option.\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 MF_AbstractPlatform updated\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls1\ilvl1\cf0 {\listtext	\uc0\u8259 	}exitLoc added. Holds the current weapon exit location for better precision when using intercept and ballistics.\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 Bug fixes:\
+{\listtext	\uc0\u8259 	}Fixed out of sync error in MF_TargetList\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf0 1.1\
+Migrated code to C#\
+Architecture reorganization:\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls3\ilvl1\cf0 {\listtext	\uc0\u8259 	}Many changes\
+{\listtext	\uc0\u8259 	}Better modular support, and better project versatility\
+{\listtext	\uc0\u8259 	}Many script names have changed to reflect this\
+{\listtext	\uc0\u8259 	}Base classes provided for some scripts to allow for better modular support\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls3\ilvl0\cf0 Various improvements to some of the basic scripts\
+Added tooltips to many fields\
+Bug Fixes:\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls3\ilvl1\cf0 {\listtext	\uc0\u8259 	}Fixed turningAimInaccuracy to work when AimError is 0\
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx350\tx712\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\fi-1\pardirnatural\partightenfactor0
+\ls4\ilvl0\cf0 1.0\
+Initial release}

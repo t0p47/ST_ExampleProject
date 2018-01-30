@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 639fa16e1964942d48398ac47a657431
+labels:
+- AI
+- Turret
+- Smooth
+- Automatic
+- Intercept
+- Ballistic
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c47acc55a1ad248c9a062dd4d3e4a5bf
+labels:
+- Ballistic
+- Blast
+- Explosion
+- Shell
+- Artillery
+- Trajectory
+- Projectile
+- Gravity
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

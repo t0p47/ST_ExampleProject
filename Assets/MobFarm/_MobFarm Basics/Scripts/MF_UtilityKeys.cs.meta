@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 67682509a94684a1e857d295ba687bee
+labels:
+- FPS
+- MouseLook
+timeCreated: 1456960097
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
