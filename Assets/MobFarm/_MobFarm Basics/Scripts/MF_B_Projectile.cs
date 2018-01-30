@@ -82,7 +82,7 @@ public class MF_B_Projectile : MonoBehaviour {
 			// apply damage to target
 			_script.damageID = damageID + Time.time; // mark as damaged by this source, this frame
 			_script.health -= damage;
-            _script.shieldDamage(damage);
+            //_script.shieldDamage(damage);
 
 //			Debug.Log( trans+" > "+_script+" : "+damage );
 		}
@@ -101,10 +101,3 @@ public class MF_B_Projectile : MonoBehaviour {
 		return null;
 	}
 }
-
-
-
-
-
-
-

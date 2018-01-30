@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShieldEffect : MonoBehaviour {
 
-    private float EffectTime;
+    /*private float EffectTime;
 
     private float[] RemainingTime;
 
@@ -93,5 +93,5 @@ public class ShieldEffect : MonoBehaviour {
 				    hitCount = 0;
 		    }
 	    }
-    }
+    }*/
 }
